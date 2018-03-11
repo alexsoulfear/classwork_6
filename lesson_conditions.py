@@ -24,12 +24,12 @@ else:
 
 
 def is_zero(number):
-    result = number == 0
-    if result:
-        return True
-    else:
-        return False
-    # return result
+    # result = number == 0
+    # if result:
+    #     return True
+    # else:
+    #     return False
+    return number == 0
 
 b = 0
 if is_zero(b):
