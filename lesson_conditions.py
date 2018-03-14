@@ -1,3 +1,5 @@
+import math
+
 a = 10
 b = 20
 
@@ -77,7 +79,13 @@ def is_leap_year(year) -> bool:
 
 
 for i in range(2100):
-    print('%d is leap year: %s' % (i, is_leap_year(i)))
+    if not is_leap_year(i):
+        print('%d is NOT leap year: %s' % (i, is_leap_year(i)))
+
+    # if is_leap_year(i):
+    #     pass
+    # else:
+    #     print('%d is NOT leap year: %s' % (i, is_leap_year(i)))
 
 
 data = input('Enter your name: ')
@@ -87,3 +95,4 @@ print(age, type(age))
 height = float(input('Enter your height: '))
 height = height
 print(height, type(height))
+
