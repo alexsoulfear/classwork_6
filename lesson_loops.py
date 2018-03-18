@@ -20,13 +20,18 @@ for i in range(100, 20, -5):
 for i in range(2, 101, 2):
     print('Iteration#:', i)
 
-total_num = 0
-for i in range(1, 101):
-    # total_num = total_num + i
-    total_num += i
+def sum_of_n(n):
+    total_num = 0
+    for i in range(1, n+1):
+        # total_num = total_num + i
+        total_num += i
+    return total_num
+
+print('Total num:', sum_of_n(100))
+print('Total num:', sum_of_n(10))
+print('Total num:', sum_of_n(1000))
 
 
-print('Total num:', total_num)
 
 
 # # i++; ++i;
@@ -85,3 +90,33 @@ print('Mean:', mean_whatever_on_n(12, 100, 200))
 # print('Mean:', mean_whatever_on_n(12, 10, 20))
 # print('Mean:', mean_whatever_on_n(12, -20, -10))
 # print('Mean:', mean_whatever_on_n(12, 11, 22))
+
+
+def min_of_n(n, lower_bound, upper_bound):
+    # current_min = upper_bound
+    current_min = float('inf')
+    for i in range(n):
+        rand_num = random.randint(lower_bound, upper_bound)
+        print(rand_num)
+
+        if current_min > rand_num:
+            current_min = rand_num
+
+    return current_min
+
+print('#################')
+print('Min:', min_of_n(12, -200, -100))
+
+
+def max_of_n(n, lower_bound, upper_bound):
+#    current_max = lower_bound
+    current_max = -float('inf')
+    for i in range(n):
+        rand_num = random.randint(lower_bound, upper_bound)
+        print(rand_num)
+
+        if current_max < rand_num:
+            current_max = rand_num
+
+    return current_max
+print('Max:', max_of_n(12, 20, 100))
